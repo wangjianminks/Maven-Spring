@@ -6,7 +6,7 @@
  * 修改时间：2017年11月8日
  */
 
-package com.cheer.spring.ioc;
+package com.cheer.spring.ioc.containter;
 
 public class PdfReportGenerator implements ReportGenerator
 {

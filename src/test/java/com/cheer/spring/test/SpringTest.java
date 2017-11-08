@@ -12,8 +12,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.cheer.spring.helloworld.MessagePrinter;
 import com.cheer.spring.helloworld.MessageService;
-import com.cheer.spring.ioc.Container;
-import com.cheer.spring.ioc.ReportService;
+import com.cheer.spring.ioc.containter.Container;
+import com.cheer.spring.ioc.containter.ReportService;
 
 /**
  * 简单测试Spring框架

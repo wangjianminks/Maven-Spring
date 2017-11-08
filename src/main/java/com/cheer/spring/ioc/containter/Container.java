@@ -1,5 +1,5 @@
 
-package com.cheer.spring.ioc;
+package com.cheer.spring.ioc.containter;
 
 import java.io.IOException;
 import java.io.InputStream;
