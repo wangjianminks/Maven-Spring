@@ -5,12 +5,15 @@
  */
 package com.cheer.spring.test;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.cheer.spring.helloworld.MessagePrinter;
 import com.cheer.spring.helloworld.MessageService;
+import com.cheer.spring.ioc.Container;
+import com.cheer.spring.ioc.ReportService;
 
 /**
  * 简单测试Spring框架
@@ -44,4 +47,15 @@ public class SpringTest
 		msgPrinter.printMessage();
 		
 	}
+	
+	@Test
+	public void testIoc()
+	{
+		Container container = new Container();
+		ReportService reportService = (ReportService) container
+				.getComponent("reportService");
+		Assert.assertNotNull(reportService);
+		reportService.generateMonthlyReport();
+	}
+
 }
