@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.cheer.spring.ioc.anntation.dao.PetDao;
 
 
-@Repository
+@ Repository
 public class PetDaoImpl implements PetDao
 {
 
