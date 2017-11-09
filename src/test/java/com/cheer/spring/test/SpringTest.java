@@ -21,6 +21,7 @@ import com.cheer.spring.ioc.containter.ReportService;
  * @author WangJianmin
  * @version com.cheer.spring.test
  */
+@SuppressWarnings("resource")
 public class SpringTest
 {
 	@Test
@@ -39,6 +40,8 @@ public class SpringTest
 	@Test
 	public void testSpringStyle()
 	{
+		//ClassPathXmlApplicationContext：从 类路径下加载配置文件
+		//FileSystemXmlApplicationContext: 从文件系统中加载配置文件/
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"spring/spring.beans.xml");
 		

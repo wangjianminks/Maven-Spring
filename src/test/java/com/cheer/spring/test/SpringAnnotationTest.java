@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.cheer.spring.ioc.annotation.service.MasterService;
 import com.cheer.spring.ioc.annotation.service.PetService;
 
 
@@ -22,9 +23,20 @@ public class SpringAnnotationTest
     @Autowired
     private PetService petService;
     
+    @Autowired
+    private MasterService masterService;
+    
     @Test
     public void test()
     {
         Assert.assertEquals(1, petService.find("scott", "tiger"));
     }
+    
+    @Test
+    public void testMaster()
+    {
+    	Assert.assertEquals(1, masterService.find("scott", "tiger"));
+    }
+    
+    
 }

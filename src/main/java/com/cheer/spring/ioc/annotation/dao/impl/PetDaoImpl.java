@@ -16,6 +16,7 @@ import com.cheer.spring.ioc.annotation.dao.PetDao;
  * @version PetDaoImpl
  *上午9:04:05
  */
+//资源库
 @ Repository
 public class PetDaoImpl implements PetDao
 {
