@@ -6,8 +6,15 @@
  * 修改时间：2017年11月8日
  */
 
-package com.cheer.spring.ioc.anntation.service;
+package com.cheer.spring.ioc.annotation.service;
 
+
+/**
+ * 宠物服务层接口
+ * @author WangJianmin
+ * @version PetService
+ *上午9:09:08
+ */
 public interface PetService
 {
     int find(String username, String password);
