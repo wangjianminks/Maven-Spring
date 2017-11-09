@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+<bean id="msgService" class="com.cheer.spring.helloworld.MessageService"></bean>
+
+	<!-- id是唯一标识符 ：Bean 的名称。 在 IOC 容器中必须是唯一的 若 id 没有指定，Spring 自动将权限定性类名作为 Bean 
+		的名字 id 可以指定多个名字，名字之间可用逗号、分号、或空格分隔 -->
+	<bean id="msgPrinter" class="com.cheer.spring.helloworld.MessagePrinter">
+	<!-- 属性注入 使用 <property> 元素, 使用 name 属性指定 Bean 的属性名称，value 属性或 <value> 子节点指定属性值  -->
+		<property name="msgService" ref="msgService"></property>
+	</bean>
+
+</beans>

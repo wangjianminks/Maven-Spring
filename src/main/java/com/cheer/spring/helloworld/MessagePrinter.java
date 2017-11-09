@@ -14,7 +14,8 @@ package com.cheer.spring.helloworld;
 public class MessagePrinter
 {
 	private MessageService msgService;
-
+	
+	//属性注入即通过 setter 方法注入Bean 的属性值或依赖的对象
 	public void setMsgService(MessageService msgService)
 	{
 		this.msgService = msgService;
