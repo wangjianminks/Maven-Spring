@@ -7,6 +7,7 @@ package com.cheer.spring.aop.aspectj;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -30,10 +31,10 @@ public class CalcLoggingHandler
 			.getLogger(CalcLoggingHandler.class);
 
 	// 切面
-/*	@Pointcut("execution(* ArithmeticCalculator.add(..))")
+	@Pointcut("execution(* ArithmeticCalculator.add(..))")
 	private void loggingOperation()
 	{
-	}*/
+	}
 
 	/**
 	 * 前置通知
@@ -50,10 +51,15 @@ public class CalcLoggingHandler
 	// * 代表匹配任意修饰符及任意返回值
 	// 参数列表中的 .. 匹配任意数量的参数
 
-	@Before("execution(* com.cheer.spring.aop.aspectj.ArithmeticCalculator.add(..))")
+	@Before("loggingOperation()")
 	public void logBefore()
 	{
 		LOGGER.info("the method adds begins");
 	}
-
+	
+	@After("loggingOperation()")
+	public void logAfter()
+	{
+		LOGGER.info("the method adds ends");
+	}
 }
