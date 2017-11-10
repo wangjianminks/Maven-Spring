@@ -21,14 +21,11 @@
 	
 	<Loggers>
 		<!-- Application Logger -->
-		<Root name = "com.cheer" level="debug" additivity = "false">
+		<logger name = "com.cheer" level="debug" additivity = "false">
 			<AppenderRef ref="console" />
 			<AppenderRef ref="file" />
-		</Root>
-	</Loggers>
-	
+		</logger>
 
-	<Loggers>
 		<!-- Root Logger -->
 		<Root level="error">
 			<AppenderRef ref="console" />
